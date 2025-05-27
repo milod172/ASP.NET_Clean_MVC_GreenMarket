@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreenMarket.CustomerSite", "GreenMarket.CustomerSite\GreenMarket.CustomerSite.csproj", "{610DEE82-38A2-4D8A-A984-2EE5AB05C126}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreenMarket.Domain", "GreenMarket.Domain\GreenMarket.Domain.csproj", "{B181F9C3-BC3F-4600-9C01-DF61B7FDA746}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreenMarket.Infrastructure", "GreenMarket.Infrastructure\GreenMarket.Infrastructure.csproj", "{FFA0615C-513A-42EF-A9ED-C3BA8EA34FCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreenMarket.Application", "GreenMarket.Application\GreenMarket.Application.csproj", "{4F88CA14-6969-4301-A4D1-696DDA987C2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreenMarket.API", "GreenMarket.API\GreenMarket.API.csproj", "{D66ED9D6-E97A-40CD-B0C6-250FC83F1CFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreenMarket.AdminSite", "GreenMarket.AdminSite\GreenMarket.AdminSite.csproj", "{DA491D85-2E55-4DFC-B508-6B3736D792B4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{610DEE82-38A2-4D8A-A984-2EE5AB05C126}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{610DEE82-38A2-4D8A-A984-2EE5AB05C126}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{610DEE82-38A2-4D8A-A984-2EE5AB05C126}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{610DEE82-38A2-4D8A-A984-2EE5AB05C126}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B181F9C3-BC3F-4600-9C01-DF61B7FDA746}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B181F9C3-BC3F-4600-9C01-DF61B7FDA746}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B181F9C3-BC3F-4600-9C01-DF61B7FDA746}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B181F9C3-BC3F-4600-9C01-DF61B7FDA746}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFA0615C-513A-42EF-A9ED-C3BA8EA34FCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFA0615C-513A-42EF-A9ED-C3BA8EA34FCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFA0615C-513A-42EF-A9ED-C3BA8EA34FCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFA0615C-513A-42EF-A9ED-C3BA8EA34FCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F88CA14-6969-4301-A4D1-696DDA987C2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F88CA14-6969-4301-A4D1-696DDA987C2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F88CA14-6969-4301-A4D1-696DDA987C2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F88CA14-6969-4301-A4D1-696DDA987C2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D66ED9D6-E97A-40CD-B0C6-250FC83F1CFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D66ED9D6-E97A-40CD-B0C6-250FC83F1CFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D66ED9D6-E97A-40CD-B0C6-250FC83F1CFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D66ED9D6-E97A-40CD-B0C6-250FC83F1CFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA491D85-2E55-4DFC-B508-6B3736D792B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA491D85-2E55-4DFC-B508-6B3736D792B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA491D85-2E55-4DFC-B508-6B3736D792B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA491D85-2E55-4DFC-B508-6B3736D792B4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
