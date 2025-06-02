@@ -1,8 +1,7 @@
-﻿using GreenMarket.Application.Interfaces.Persistence;
-using GreenMarket.Domain.Entities;
+﻿using GreenMarket.Domain.Entities;
 using Microsoft.EntityFrameworkCore.Query;
 
-namespace GreenMarket.Domain.Interfaces.Entities
+namespace GreenMarket.Application.Contacts.Persistence
 {
     public interface IApplicationUserRepository
     {

@@ -1,11 +1,8 @@
-﻿
-
-using System.Linq.Expressions;
+﻿using System.Linq.Expressions;
 using GreenMarket.Domain.Entities;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query;
 
-namespace GreenMarket.Application.Interfaces.Persistence
+namespace GreenMarket.Application.Contacts.Persistence
 {
     public interface IBaseRepository<T, TKey> where T : BaseEntity<TKey>
     {

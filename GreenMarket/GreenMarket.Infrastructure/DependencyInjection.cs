@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using GreenMarket.Application.Interfaces.Persistence;
-using GreenMarket.Domain.Interfaces.Entities;
+﻿using GreenMarket.Application.Contacts.Persistence;
 using GreenMarket.Infrastructure.Common;
 using GreenMarket.Infrastructure.Persistence;
 using GreenMarket.Infrastructure.Persistence.Repositories;

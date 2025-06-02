@@ -1,5 +1,5 @@
 ﻿using System.Linq.Expressions;
-using GreenMarket.Application.Interfaces.Persistence;
+using GreenMarket.Application.Contacts.Persistence;
 using GreenMarket.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query;

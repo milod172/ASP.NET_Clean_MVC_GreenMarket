@@ -1,7 +1,7 @@
 ﻿using GreenMarket.Domain.Entities;
 using GreenMarket.Infrastructure.Persistence;
 using GreenMarket.Infrastructure.Persistence.Repositories;
-using GreenMarket.Application.Interfaces.Persistence;
+using GreenMarket.Application.Contacts.Persistence;
 
 namespace GreenMarket.Infrastructure.Repositories
 {

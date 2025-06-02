@@ -1,4 +1,4 @@
-﻿namespace GreenMarket.Application.Interfaces.Persistence
+﻿namespace GreenMarket.Application.Contacts.Persistence
 {
     public interface IUnitOfWork 
     {

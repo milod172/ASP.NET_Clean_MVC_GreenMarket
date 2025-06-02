@@ -1,4 +1,7 @@
-﻿namespace GreenMarket.Domain.Entities
+﻿using System.Globalization;
+using System.Text;
+
+namespace GreenMarket.Domain.Entities
 {
     public class Product : BaseEntity<int>
     {
@@ -15,5 +18,50 @@
         public virtual ICollection<CartItem> CartItems { get; set; } = [];
         public virtual ICollection<OrderItem> OrderItems { get; set; } = [];
         public virtual ICollection<ProductImage> ProductImages { get; set; } = [];
+
+        public static Product Create(string name, string description, decimal price, int? categoryId, string? details)
+        {
+            var nameParts = name.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+
+            var skuParts = nameParts.Select(part =>
+            {
+                var noDiacritics = RemoveDiacritics(part);
+
+                
+                if (!noDiacritics.Any(char.IsLetter))
+                    return noDiacritics;
+
+                return noDiacritics.ToUpperInvariant();
+            });
+
+            var generatedSku = string.Join("-", skuParts);
+
+            return new Product
+            {
+                ProductName = name,
+                Description = description,
+                UnitPrice = price,
+                Sku = generatedSku,
+                Details = details,
+                CategoryId = categoryId
+            };
+        }
+
+        private static string RemoveDiacritics(string text)
+        {
+            var normalized = text.Normalize(NormalizationForm.FormD);
+            var sb = new StringBuilder();
+
+            foreach (var c in normalized)
+            {
+                var unicodeCategory = CharUnicodeInfo.GetUnicodeCategory(c);
+                if (unicodeCategory != UnicodeCategory.NonSpacingMark)
+                {
+                    sb.Append(c);
+                }
+            }
+
+            return sb.ToString().Normalize(NormalizationForm.FormC);
+        }
     }
 }

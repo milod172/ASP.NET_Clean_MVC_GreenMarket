@@ -1,6 +1,6 @@
 ﻿using System.Data;
 using System.Reflection;
-using GreenMarket.Application.Interfaces.Persistence;
+using GreenMarket.Application.Contacts.Persistence;
 using GreenMarket.Domain.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;

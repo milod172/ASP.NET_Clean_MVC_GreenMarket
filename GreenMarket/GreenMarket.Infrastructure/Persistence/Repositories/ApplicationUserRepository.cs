@@ -1,9 +1,9 @@
 ﻿using GreenMarket.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using GreenMarket.Domain.Entities;
-using GreenMarket.Domain.Interfaces.Entities;
 using Microsoft.EntityFrameworkCore.Query;
 using GreenMarket.Infrastructure.Common;
+using GreenMarket.Application.Contacts.Persistence;
 
 namespace GreenMarket.Infrastructure.Repositories
 {

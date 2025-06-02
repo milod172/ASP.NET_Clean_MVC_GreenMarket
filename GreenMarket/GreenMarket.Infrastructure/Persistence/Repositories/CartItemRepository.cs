@@ -1,4 +1,4 @@
-﻿using GreenMarket.Application.Interfaces.Persistence;
+﻿using GreenMarket.Application.Contacts.Persistence;
 using GreenMarket.Domain.Entities;
 using GreenMarket.Infrastructure.Persistence;
 using GreenMarket.Infrastructure.Persistence.Repositories;

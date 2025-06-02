@@ -1,6 +1,6 @@
 ﻿using GreenMarket.Domain.Entities;
 
-namespace GreenMarket.Application.Interfaces.Persistence
+namespace GreenMarket.Application.Contacts.Persistence
 {
     public interface ICategoryRepository : IBaseRepository<Category, int>
     {
