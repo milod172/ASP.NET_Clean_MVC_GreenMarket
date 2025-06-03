@@ -16,10 +16,6 @@
 	
 	  <ItemGroup>
 		<ProjectReference Include="..\GreenMarket.Domain\GreenMarket.Domain.csproj" />
-	  </ItemGroup>	
-	
-	  <ItemGroup>
-	    <Folder Include="Features\Products\Queries\" />
 	  </ItemGroup>
 
 </Project>

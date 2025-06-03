@@ -4,5 +4,6 @@ namespace GreenMarket.Application.Contacts.Persistence
 {
     public interface IProductRepository : IBaseRepository<Product, int>
     {
+       
     }
 }

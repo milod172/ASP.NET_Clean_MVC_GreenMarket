@@ -40,6 +40,7 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
+    // Build a swagger endpoint for each discovered API version
     app.UseSwagger();
     app.UseSwaggerUI(options =>
     {
