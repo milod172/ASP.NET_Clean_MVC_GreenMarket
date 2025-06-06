@@ -105,8 +105,8 @@ namespace GreenMarket.Infrastructure.Migrations
                         {
                             Id = "4cb5df7e-135d-42cf-8723-f40f0c919e2c",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "fc9873e7-5707-423d-8cd5-e7931853b72f",
-                            CreatedDate = new DateTime(2025, 5, 27, 18, 25, 41, 818, DateTimeKind.Local).AddTicks(873),
+                            ConcurrencyStamp = "ff0bacfc-302d-4112-b919-c37db2ef2268",
+                            CreatedDate = new DateTime(2025, 6, 5, 17, 48, 33, 105, DateTimeKind.Local).AddTicks(3543),
                             Email = "admin@gmail.com",
                             EmailConfirmed = true,
                             FirstName = "System",
@@ -114,10 +114,10 @@ namespace GreenMarket.Infrastructure.Migrations
                             LockoutEnabled = true,
                             NormalizedEmail = "ADMIN@GMAIL.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "$2a$11$eWNyF0762dBUv5p3lh4OS.8WW.XWB8Hgy/8qTM3vvInfDsYRE1Y66",
+                            PasswordHash = "AQAAAAIAAYagAAAAEK3GgV4tF6NIbnD9JzUNAqma5IxGzdRCLISVFzf24f5ObuCBpPBorJvyKGr4CTWbFw==",
                             PhoneNumber = "0932100437",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "a0ecb09d-cd35-416a-a3e4-3a25aa2cd3bd",
+                            SecurityStamp = "988b0ca2-cbaf-4af9-8928-59d901da451e",
                             TwoFactorEnabled = false,
                             UserName = "admin"
                         },
@@ -125,8 +125,8 @@ namespace GreenMarket.Infrastructure.Migrations
                         {
                             Id = "41d2d46d-6c0d-4fcc-86fe-ba65362fe40c",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "53d9e8ab-2554-48e9-9e8f-e3f8b665b894",
-                            CreatedDate = new DateTime(2025, 5, 27, 18, 25, 41, 958, DateTimeKind.Local).AddTicks(5808),
+                            ConcurrencyStamp = "00d4f9cf-5cc3-4d17-be18-c6cc20047dcd",
+                            CreatedDate = new DateTime(2025, 6, 5, 17, 48, 33, 166, DateTimeKind.Local).AddTicks(3183),
                             Email = "ngxdung172@gmail.com",
                             EmailConfirmed = true,
                             FirstName = "Nguyễn",
@@ -134,10 +134,10 @@ namespace GreenMarket.Infrastructure.Migrations
                             LockoutEnabled = true,
                             NormalizedEmail = "NGXDUNG172@GMAIL.COM",
                             NormalizedUserName = "MILOD",
-                            PasswordHash = "$2a$11$kFWhSjOmIyjFj3AgKl.tW.RtwSwiY0ZakAZspX6b1wtGNFGivEKLC",
+                            PasswordHash = "AQAAAAIAAYagAAAAEDOzBzA1wZvd3GhcLBrXxrHolNtDADIkWyQ361p7+Olu71Sa9yiN3imQ+ZLXJtlN4Q==",
                             PhoneNumber = "0932100437",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "64e57387-2852-4490-b82a-f6e1c682b37e",
+                            SecurityStamp = "776fc1c6-2c64-4815-ad9c-407dea30250d",
                             TwoFactorEnabled = false,
                             UserName = "milod"
                         });

@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
 using GreenMarket.Domain.Entities;
+using Microsoft.AspNetCore.Identity;
 
 namespace GreenMarket.Infrastructure.Persistence.Configurations
 {
@@ -21,6 +22,7 @@ namespace GreenMarket.Infrastructure.Persistence.Configurations
                 .HasForeignKey(x => x.CustomerId)
                 .OnDelete(DeleteBehavior.Cascade);
 
+            var hasher = new PasswordHasher<ApplicationUser>();
 
             builder.HasData(new List<ApplicationUser>
             {
@@ -35,7 +37,7 @@ namespace GreenMarket.Infrastructure.Persistence.Configurations
                     NormalizedEmail = "ADMIN@GMAIL.COM",
                     EmailConfirmed = true,
                     PhoneNumber = "0932100437",
-                    PasswordHash = BCrypt.Net.BCrypt.HashPassword("1"),
+                    PasswordHash = hasher.HashPassword(new(), "1"),
                     LockoutEnabled = true,
                  },
                 new ApplicationUser
@@ -49,7 +51,7 @@ namespace GreenMarket.Infrastructure.Persistence.Configurations
                     NormalizedEmail = "NGXDUNG172@GMAIL.COM",
                     EmailConfirmed = true,
                     PhoneNumber = "0932100437",
-                    PasswordHash = BCrypt.Net.BCrypt.HashPassword("1"),
+                    PasswordHash = hasher.HashPassword(new(), "1"),
                     LockoutEnabled = true,
                 }
              });

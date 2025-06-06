@@ -1,4 +1,5 @@
 using GreenMarket.API.Configurations;
+using GreenMarket.API.Middleware;
 using GreenMarket.Application;
 using GreenMarket.Domain.Entities;
 using GreenMarket.Infrastructure;
@@ -10,6 +11,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 var appSettings = new AppSettings();
 builder.Configuration.Bind(appSettings);
+
+// DI appSetting.jwt
+builder.Services.AddSingleton(appSettings.Jwt);
 
 // Register API Services, Swagger, ...
 builder.Services.AddApiServices(builder.Configuration);
@@ -25,6 +29,9 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
     .AddEntityFrameworkStores<AppDbContext>()
     .AddDefaultTokenProviders();
 
+// Config Authentication (Placed after Registere identity)
+builder.Services.ConfigureAuthentication(appSettings.Jwt);
+
 // Register CORS
 builder.Services.AddCors(options =>
 {
@@ -35,7 +42,6 @@ builder.Services.AddCors(options =>
 });
 
 var app = builder.Build();
-
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -56,12 +62,14 @@ else
     app.UseHsts();
 }
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
 // app use these
-app.UseCors("AllowAnyOrigin");
+app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
+app.UseCors("AllowAnyOrigin");
 
+app.UseExceptionMiddleware();
 app.MapControllers();
 app.Run();

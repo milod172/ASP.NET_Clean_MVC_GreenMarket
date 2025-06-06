@@ -15,10 +15,12 @@ namespace GreenMarket.Application.Features.Products.Dto
         public string Sku { get; set; } = string.Empty;
         public int TotalSell { get; set; } = 0;
         public int? CategoryId { get; set; }
+        public string CategoryName {  get; set; } = string.Empty;
 
         public void Mapping(Profile profile)
         {
-            profile.CreateMap<Product, GetProductDetailsDto>();
+            profile.CreateMap<Product, GetProductDetailsDto>()
+                .ForMember(dest => dest.CategoryName, opt => opt.MapFrom(src => src.Category!.CategoryName));
         }
     }
 }

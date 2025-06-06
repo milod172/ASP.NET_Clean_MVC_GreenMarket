@@ -10,5 +10,15 @@
 
         public virtual ICollection<Category> SubCategories { get; set; } = [];
         public virtual ICollection<Product> Products { get; set; } = [];
+
+        public static Category Create(string name, string description, int? parentCategoryId)
+        {
+            return new Category
+            {
+                CategoryName = name,
+                Description = description,
+                ParentCategoryId = parentCategoryId
+            };
+        }
     }
 }

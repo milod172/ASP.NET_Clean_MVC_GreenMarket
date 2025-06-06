@@ -8,8 +8,9 @@ namespace GreenMarket.API.Configurations
         {
             services.AddEndpointsApiExplorer(); //Swagger found endpoint api
             services.AddSwaggerGen(options =>
-            {              
-                var securityScheme = new OpenApiSecurityScheme
+            {
+                // Define the Bearer authentication scheme
+                options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {
                     Description = "JWT Authorization header using the Bearer scheme. Enter 'Bearer {token}' (without quotes).",
                     Name = "Authorization",
@@ -17,18 +18,26 @@ namespace GreenMarket.API.Configurations
                     Type = SecuritySchemeType.Http,
                     Scheme = "bearer",
                     BearerFormat = "JWT"
-                };
+                });
 
-                // Define the Bearer token security scheme for Swagger (JWT Authorization header)
-                options.AddSecurityDefinition("Bearer", securityScheme);
-
-                // Apply the Bearer security scheme globally to all API endpoints
-                options.AddSecurityRequirement(
-                    new OpenApiSecurityRequirement
+                // Add a global security requirement using the Bearer scheme
+                options.AddSecurityRequirement(new OpenApiSecurityRequirement
+                {
                     {
-                        { securityScheme, Array.Empty<string>() }
+                        new OpenApiSecurityScheme
+                        {
+                            Reference = new OpenApiReference
+                            {
+                                Type = ReferenceType.SecurityScheme,
+                                Id = "Bearer" // Must match the name defined in AddSecurityDefinition
+                            },
+                            Scheme = "bearer",
+                            Name = "Bearer",
+                            In = ParameterLocation.Header
+                        },
+                        new List<string>() // No scopes needed for JWT Bearer
                     }
-                );
+                });
             });
 
             return services;

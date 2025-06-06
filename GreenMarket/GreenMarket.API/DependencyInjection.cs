@@ -1,5 +1,6 @@
 ﻿using System.Reflection;
 using FluentValidation;
+using GreenMarket.Application.Common.Interfaces;
 
 namespace GreenMarket.API.Configurations
 {
@@ -15,10 +16,11 @@ namespace GreenMarket.API.Configurations
 
             //Config API Versioning 
             services.ConfigureOptions<ApiVersionSwaggerGenOptions>();
-          
+
             //Config Swagger (auth, description, filter,...)
             services.ConfigureSwashbuckle();
 
+            services.AddSingleton<IJwtService, JwtService>();
             return services;
         } 
     }

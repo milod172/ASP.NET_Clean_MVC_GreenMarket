@@ -16,7 +16,7 @@ namespace GreenMarket.Infrastructure
             services.AddDbContext<AppDbContext>(options =>
             {
                 options.UseSqlServer(connectionString);
-                options.UseOpenIddict();
+                //options.UseOpenIddict();
             });
 
             //Dùng cho Background Service
